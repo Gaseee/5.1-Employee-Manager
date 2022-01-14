@@ -17,7 +17,7 @@ td {
 }
 table {
   border-radius: 8px;
-  border-color: white;
+  background-color: white;
   border-collapse: collapse;
   width:100%;
 }
@@ -32,7 +32,7 @@ th{
   border-bottom: 1px solid #CCC;
   background-color: #E5E7EB;
   color: #374151;
-  padding: 6px 16px;
+  padding: 8px 16px;
 }
 thead {
   background-color: #E5E7EB;
@@ -55,4 +55,9 @@ tr:nth-child(2n) td{
   border-radius: 8px;
   padding:8px 16px;
   text-decoration: none;
+}
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
