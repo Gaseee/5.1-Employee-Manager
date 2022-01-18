@@ -1,5 +1,5 @@
 const {Employee} = require('../models');
-const jobtitles = ['CEO', 'VP'];
+const jobtitles = ['CEO', 'VP', 'Web Developer', 'Data Scientist', 'Product Manager', 'Business Analyst'];
 const states = ['CA', 'AZ'];
 
 module.exports.displayEmployees = async function(req, res){
@@ -21,6 +21,7 @@ module.exports.renderAddEmployeeForm = function(req, res){
                 zip:'',
                 phonenumber:'',
                 yearhired:'',
+                age:'',
             },
             jobtitles,
             stateslist:states
@@ -39,7 +40,8 @@ module.exports.addEmployee = async function(req, res){
             state:req.body.state,
             zip:req.body.zip,
             phonenumber:req.body.phonenumber,
-            yearhired:req.body.yearhired
+            yearhired:req.body.yearhired,
+            age:req.body.age,
         }
     );
     res.redirect('/');
@@ -66,7 +68,8 @@ module.exports.updateEmployee = async function(req, res){
             state:req.body.state,
             zip:req.body.zip,
             phonenumber:req.body.phonenumber,
-            yearhired:req.body.yearhired
+            yearhired:req.body.yearhired,
+            age:req.body.age,
         },
         {
             where: {
